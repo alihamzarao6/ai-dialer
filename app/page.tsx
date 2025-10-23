@@ -9,7 +9,7 @@ import Pricing from "@/components/homepage/Pricing";
 import Testimonials from "@/components/homepage/Testimonials";
 import CTA from "@/components/homepage/CTA";
 import Footer from "@/components/homepage/Footer";
-import BackgroundEffects from "@/components/BackgroundEffects";
+import BackgroundEffects from "@/components/shared/BackgroundEffects";
 
 export default function Home() {
   return (

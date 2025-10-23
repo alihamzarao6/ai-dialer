@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     "LeadProsper",
     "AI voice agent",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -35,7 +35,7 @@ export default function GlowingOrb() {
 
       {/* Core orb */}
       <motion.div
-        className="absolute inset-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-2xl flex items-center justify-center"
+        className="absolute inset-6 rounded-full bg-linear-to-br from-emerald-400 to-emerald-600 shadow-2xl flex items-center justify-center"
         animate={{
           boxShadow: [
             "0 0 20px rgba(16, 185, 129, 0.5)",
