@@ -25,7 +25,7 @@ export default function UseCases() {
     },
     {
       icon: <Phone className="w-8 h-8" />,
-      title: "Promotional & Engagement",
+      title: "Promotional Campaigns",
       description:
         "Deliver personalized marketing calls that engage users and drive conversions with natural-sounding AI conversations.",
       stats: ["2x engagement", "Personalized calls", "Higher conversion"],
@@ -34,7 +34,7 @@ export default function UseCases() {
   ];
 
   return (
-    <section className="py-32 bg-[#001a0a] relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

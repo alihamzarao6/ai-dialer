@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="py-32 bg-gradient-to-b from-[#001a0a] to-emerald-950/20 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
@@ -19,7 +19,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="glass rounded-3xl p-12 md:p-16 border border-emerald-500/30 text-center bg-gradient-to-br from-emerald-950/30 to-transparent"
+          className="glass rounded-3xl p-12 md:p-16 border border-emerald-500/30 text-center bg-linear-to-br from-emerald-950/30 to-transparent"
         >
           {/* Sparkle icon */}
           <motion.div
@@ -29,7 +29,7 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block mb-6"
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto">
+            <div className="w-16 h-16 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto">
               <Sparkles className="w-8 h-8 text-white" />
             </div>
           </motion.div>

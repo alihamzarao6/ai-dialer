@@ -39,7 +39,7 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-32 bg-gradient-to-b from-emerald-950/10 to-[#001a0a] relative overflow-hidden"
+      className="py-24 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -63,7 +63,7 @@ export default function Pricing() {
               <div
                 className={`glass rounded-3xl p-8 h-full border ${
                   plan.popular
-                    ? "border-emerald-500/50 bg-gradient-to-b from-emerald-950/30 to-transparent"
+                    ? "border-emerald-500/50 bg-linear-to-b from-emerald-950/30 to-transparent"
                     : "border-emerald-900/20"
                 } relative overflow-hidden group hover:border-emerald-500/50 transition-all duration-300`}
               >
@@ -135,13 +135,13 @@ export default function Pricing() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6 bg-emerald-950/20 rounded-xl">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">
+              <div className="text-2xl font-bold text-emerald-400 mb-2">
                 Base Rate
               </div>
               <p className="text-gray-400 text-sm">For answered calls</p>
             </div>
             <div className="text-center p-6 bg-emerald-950/20 rounded-xl">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">
+              <div className="text-2xl font-bold text-emerald-400 mb-2">
                 Premium Rate
               </div>
               <p className="text-gray-400 text-sm">
@@ -149,7 +149,7 @@ export default function Pricing() {
               </p>
             </div>
             <div className="text-center p-6 bg-emerald-950/20 rounded-xl">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">
+              <div className="text-2xl font-bold text-emerald-400 mb-2">
                 No Charge
               </div>
               <p className="text-gray-400 text-sm">Failed calls or no answer</p>

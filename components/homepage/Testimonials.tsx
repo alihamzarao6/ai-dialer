@@ -57,7 +57,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-32 bg-[#001a0a] relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-4 border-t border-emerald-900/20">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-linear-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-2xl">
                     {testimonial.image}
                   </div>
                   <div>

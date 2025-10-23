@@ -16,12 +16,12 @@ export default function HowItWorks() {
     {
       icon: <UserPlus className="w-8 h-8" />,
       title: "Lead Generated",
-      description: "New inbound lead enters LeadProsper through your campaigns",
+      description: "New inbound lead enters LeadProsper through your campaigns and marketing channels",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: <Phone className="w-8 h-8" />,
-      title: "Local Presence Dial",
+      title: "Presence Dial",
       description:
         "CallTools automatically dials using local area code for higher answer rates",
       color: "from-purple-500 to-purple-600",
@@ -37,7 +37,7 @@ export default function HowItWorks() {
       icon: <Users className="w-8 h-8" />,
       title: "Live Transfer",
       description:
-        "Qualified leads are instantly transferred to your available sales reps",
+        "Qualified leads are instantly transferred to your available sales reps for closing",
       color: "from-orange-500 to-orange-600",
     },
     {
@@ -52,7 +52,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-32 bg-gradient-to-b from-[#001a0a] to-emerald-950/10 relative overflow-hidden"
+      className="py-24 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -72,7 +72,7 @@ export default function HowItWorks() {
 
         <div className="relative">
           {/* Connection lines */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/20 via-emerald-500/50 to-emerald-500/20 transform -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-linear-to-r from-emerald-500/20 via-emerald-500/50 to-emerald-500/20 transform -translate-y-1/2" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -86,7 +86,7 @@ export default function HowItWorks() {
                   <div className="glass rounded-2xl p-6 h-full border border-emerald-900/20 hover:border-emerald-500/50 transition-all duration-300 group">
                     {/* Icon */}
                     <div
-                      className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-16 h-16 bg-linear-to-br ${step.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {step.icon}
                     </div>

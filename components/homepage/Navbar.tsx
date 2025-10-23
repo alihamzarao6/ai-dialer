@@ -31,7 +31,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#001a0a]/90 backdrop-blur-lg border-b border-emerald-900/20"
+          ? "backdrop-blur-md bg-[#001a0a]/40"
           : "bg-transparent"
       }`}
     >
@@ -53,7 +53,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-emerald-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-white transition-colors duration-200 text-[15px] font-medium"
               >
                 {link.name}
               </Link>
@@ -64,11 +64,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="ghost"
-              className="text-white hover:text-emerald-400"
+              className="text-white hover:text-emerald-400 hover:bg-transparent"
             >
               Sign In
             </Button>
-            <Button className="bg-emerald-500 hover:bg-emerald-600 text-white">
+            <Button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 shadow-lg shadow-emerald-500/20">
               Get Started
             </Button>
           </div>
