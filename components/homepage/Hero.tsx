@@ -129,34 +129,23 @@ export default function Hero() {
             { value: "60s", label: "Avg. Qualification" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-emerald-500 mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-500">{stat.label}</div>
+              <div className="text-sm text-gray-200">{stat.label}</div>
             </div>
           ))}
         </motion.div>
       </div>
 
-      {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
-        >
-          <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z"
-            fill="url(#gradient)"
-          />
-          <defs>
-            <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#001a0a" stopOpacity="1" />
-            </linearGradient>
-          </defs>
-        </svg>
+      {/* Smooth visible green gradient fade at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-[400px] pointer-events-none">
+        {/* Visible light green to transparent gradient */}
+        <div className="absolute inset-0 bg-linear-to-b from-emerald-500/0 via-emerald-600/15 to-emerald-600/30" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-500/10 to-emerald-400/20" />
+
+        {/* Additional glow layer */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-b from-transparent via-emerald-500/15 to-emerald-600/25" />
       </div>
     </section>
   );

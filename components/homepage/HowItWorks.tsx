@@ -71,11 +71,9 @@ export default function HowItWorks() {
         </motion.div>
 
         <div className="relative">
-          {/* Connection lines */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-linear-to-r from-emerald-500/20 via-emerald-500/50 to-emerald-500/20 transform -translate-y-1/2" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index) => (
+          {/* Top row - 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 mb-8">
+            {steps.slice(0, 3).map((step, index) => (
               <FloatingCards key={index} delay={index * 0.1}>
                 <div className="relative">
                   {/* Step number */}
@@ -96,17 +94,41 @@ export default function HowItWorks() {
                       {step.title}
                     </h3>
                     <p className="text-gray-400 text-sm">{step.description}</p>
-
-                    {/* Arrow for desktop */}
-                    {index < steps.length - 1 && (
-                      <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2">
-                        <ArrowRight className="w-6 h-6 text-emerald-500" />
-                      </div>
-                    )}
                   </div>
                 </div>
               </FloatingCards>
             ))}
+          </div>
+
+          {/* Bottom row - 2 cards centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full relative z-10">
+              {steps.slice(3).map((step, index) => (
+                <FloatingCards key={index + 3} delay={(index + 3) * 0.1}>
+                  <div className="relative">
+                    {/* Step number */}
+                    <div className="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
+                      {index + 4}
+                    </div>
+
+                    <div className="glass rounded-2xl p-6 h-full border border-emerald-900/20 hover:border-emerald-500/50 transition-all duration-300 group">
+                      {/* Icon */}
+                      <div
+                        className={`w-16 h-16 bg-linear-to-br ${step.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        {step.icon}
+                      </div>
+
+                      {/* Content */}
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm">{step.description}</p>
+                    </div>
+                  </div>
+                </FloatingCards>
+              ))}
+            </div>
           </div>
         </div>
 
