@@ -7,6 +7,22 @@ import { ArrowRight, Sparkles } from "lucide-react";
 export default function CTA() {
   return (
     <section className="py-24 relative overflow-hidden">
+      {/* Top corner glows - extend above section boundary */}
+      <div className="absolute -top-48 left-0 w-[700px] h-[500px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(16,185,129,0.15),transparent_60%)]" />
+      </div>
+      <div className="absolute -top-48 right-0 w-[700px] h-[500px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(52,211,153,0.15),transparent_60%)]" />
+      </div>
+
+      {/* Bottom corner glows - extend below section boundary */}
+      <div className="absolute -bottom-48 left-0 w-[700px] h-[500px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(52,211,153,0.15),transparent_60%)]" />
+      </div>
+      <div className="absolute -bottom-48 right-0 w-[700px] h-[500px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(16,185,129,0.15),transparent_60%)]" />
+      </div>
+
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />

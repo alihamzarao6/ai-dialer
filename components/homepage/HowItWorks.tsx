@@ -54,7 +54,23 @@ export default function HowItWorks() {
       id="how-it-works"
       className="py-24 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Top corner glows */}
+      <div className="absolute top-0 left-0 w-[600px] h-[400px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(16,185,129,0.12),transparent_70%)]" />
+      </div>
+      <div className="absolute top-0 right-0 w-[600px] h-[400px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(52,211,153,0.12),transparent_70%)]" />
+      </div>
+
+      {/* Bottom corner glows */}
+      <div className="absolute bottom-0 left-0 w-[600px] h-[400px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(52,211,153,0.12),transparent_70%)]" />
+      </div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(16,185,129,0.12),transparent_70%)]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

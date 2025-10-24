@@ -121,7 +121,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          className="my-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
         >
           {[
             { value: "10x", label: "Faster Response" },
@@ -138,14 +138,22 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Smooth visible green gradient fade at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-[400px] pointer-events-none">
-        {/* Visible light green to transparent gradient */}
-        <div className="absolute inset-0 bg-linear-to-b from-emerald-500/0 via-emerald-600/15 to-emerald-600/30" />
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-500/10 to-emerald-400/20" />
+      {/* Shiny green shadow from top left */}
+      <div className="absolute top-0 left-0 w-[700px] h-[500px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(16,185,129,0.15),transparent_60%)]" />
+      </div>
 
-        {/* Additional glow layer */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-b from-transparent via-emerald-500/15 to-emerald-600/25" />
+      {/* Shiny green shadow from top right */}
+      <div className="absolute top-0 right-0 w-[700px] h-[500px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(52,211,153,0.15),transparent_60%)]" />
+      </div>
+
+      {/* Bottom corner glows */}
+      <div className="absolute bottom-0 left-0 w-[600px] h-[400px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(16,185,129,0.12),transparent_50%)]" />
+      </div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(52,211,153,0.12),transparent_50%)]" />
       </div>
     </section>
   );
